@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">TypeScript</p>
+						<li>Developed by Microsoft</li>
+						<li>Great Application</li>
+						<li>Syntactically valid</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">History</p>
+						<li>TypeScript 0.8 - 2012</li>
+						<li>TypeScript 1.0 - 2014</li>
+						<li>TypeScript 2.0 - 2016</li>
+						<li>TypeScript 3.0 - 2018</li>
+						<li>TypeScript 4.0 - 2020</li>
+						<li>TypeScript 5.0 - 2023</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">ECMAScript 2015 support</p>
+						<li>Classes</li>
+						<li>Modules</li>
+						<li>Arrow Functions</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Installation</p>
+						<li>npm install -g typescript</li>
+						<li>tsc file_example.ts</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Compiler</p>
+						<li>Node.js package</li>
+						<li>tsc</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Types</p>
+						<li>String</li>
+						<li>Number</li>
+						<li>Array</li>
+						<li>Enums</li>
+						<li>void</li>
+						<li>Tuple</li>
+						<li>Union</li>
+						<li>never</li>
+						<li>any</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Classes</p>
+						<code style="font-size: 25px;">
+							<span style="color: rgb(0, 238, 255);">class</span>  <span style="color: rgb(41, 248, 0);">Person</span>  {<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;private name: string;<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;constructor(name: string) {<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(217, 255, 0);">toString</span><span style="color: rgb(193, 4, 250);">()</span>: string {<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(162, 0, 255);">return</span>  `${this.name})`;<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}<Br>
+							}</code>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Generics</p>
+						<code style="font-size: 25px;">
+							<span style="color: rgb(0, 238, 255);">function</span><span style="color: rgb(41, 248, 0);"> id</span><T>(x: T): T {<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(162, 0, 255);">return</span>  x;<Br>
+						}</code>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Dynamic (any) types</p>
+						<code style="font-size: 25px;">
+							<span style="color: rgb(0, 238, 255);">let</span><span style="color: rgb(41, 248, 0);"> age</span> : <span style="color: rgb(205, 4, 255);">any</span> = '100';<Br>
+							<span style="color: rgb(41, 248, 0);"> age</span> = 100;<Br>
+						</code>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Union types</p>
+						<code style="font-size: 25px;">
+							<span style="color: rgb(0, 238, 255);">function</span><span style="color: rgb(41, 248, 0);"> successor</span><T>(n: number | bigint): number | bigint {<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(162, 0, 255);">return</span>  ++n;<Br>
+						}</code>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Enumerated types</p>
+						<li style="font-size: 25px; margin-bottom: 30px;"><span style="color: rgb(205, 4, 255);">enum</span> Cardsuit { Clubs, Diamonds, Hearts, Spades };<Br>
+							<span style="color: rgb(0, 238, 255);">const</span> c : Cardsuit = Cardsuit.Diamonds;
+						</li>
+						<li style="font-size: 25px; margin-bottom: 30px;"><span style="color: rgb(205, 4, 255);">enum</span> Cardsuit {Clubs = 1, Diamonds, Hearts, Spades};<Br>
+							<span style="color: rgb(0, 238, 255);">const</span> c: Cardsuit = Cardsuit.Diamonds;
+						</li>
+						<li style="font-size: 25px;"><span style="color: rgb(205, 4, 255);">enum</span> Cardsuit {Clubs = 1, Diamonds = 2, Hearts = 4, Spades = 8};<Br>
+							<span style="color: rgb(0, 238, 255);">const</span> c : Cardsuit = Cardsuit.Diamonds;
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Void types</p>
+						<code style="font-size: 25px;">
+							<span style="color: rgb(0, 238, 255);">function</span><span style="color: rgb(41, 248, 0);"> log</span> : <span style="color: rgb(205, 4, 255);">(message)</span> : void {<Br>
+								&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(248, 0, 0);"> console.log</span> (message)<Br>
+							}<Br>
+						</code>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">OOP</p>
+						<li>classes </li>
+						<li>objects</li>
+						<li>inheritance</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Interface</p>
+						<p style="font-size: 25px; margin-bottom: 30px;"><span style="color: rgb(205, 4, 255);">interface</span> interfaceName {<Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 238, 255);">name</span> : <span style="color: rgb(115, 255, 0);">string;</span><Br>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 238, 255);">social</span> : <span style="color: rgb(115, 255, 0);">string;</span><Br>
+							}
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Access modifiers</p>
+						<li>public </li>
+						<li>private </li>
+						<li>protected</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">Linting tools</p>
+						<li>ESLint </li>
+						<li>tsc</li>
+						<li>typescript-eslint</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<p style="font-size: 55px; margin-bottom: 60px;">IDEs</p>
+						<li style="font-size: 25px; margin-bottom: 30px;"><span style="color: rgb(205, 4, 255);">VSCode</span></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
